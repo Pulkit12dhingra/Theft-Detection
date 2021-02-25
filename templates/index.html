@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>VIDEO STREAM</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  
+</head>
+  <body>
+    <h2>Video Streaming Demonstration</h2>
+    <p>{{info}}</p>
+    <br>
+    <br>
+    <div class='login'>
+      <br>
+      <p><input type="submit" onclick="window.location.href='/signup'" value="Register A New User" /></p>
+    </div>
+    <img id="bg" src="{{ url_for('video_feed') }}">
+  </body>
+</html>
